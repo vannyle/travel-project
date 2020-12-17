@@ -1,13 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Путешествие по Европе</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+<div style="display: none;">
+  <include src="build/img/sprite_auto.svg"></include>
+</div>
+<header class="header container">
+  <div class="header__wrapper">
+    <svg class="header__logo" width="58" height="22">
+      <use xlink:href="#icon-logo"></use>
+    </svg>
+    <div class="header__nav">
+      <a class="header__link header__link--about" href="#">О путешествии</a>
+      <a class="header__link header__link--price" href="#">Цены</a>
+      <a class="header__link header__link--phone" href="tel:+749978468446">
+        <svg class="header__link--phone-icon" width="17" height="24">
+          <use xlink:href="#icon-phone"></use>
+        </svg>
+        +7 (499) -784-684-46
+      </a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero__wrapper">
+        <h1 class="hero__header">Путешествие по Европе</h1>
+        <p class="hero__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также
+          потрясающая красота природы.</p>
+        <button class="hero__button">смотреть тур</button>
+      </div>
+    </div>
+  </section>
+</main>
 </body>
 </html>

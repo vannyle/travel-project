@@ -1,0 +1,38 @@
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include with-link-primary;
+}
+
+.header__link {
+  &--about {
+    margin-right: 40px;
+  }
+
+  &--price {
+    margin-right: 80px;
+  }
+
+  &--phone {
+    position: relative;
+    transition: stroke $transition-base;
+
+    &:hover {
+      .header__link--phone-icon {
+        stroke: $color-accent-primary;
+      }
+    }
+  }
+
+  &--phone-icon {
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    fill: $color-tertiary;
+    transform: translateY(-50%);
+    stroke: $color-primary;
+  }
+}
