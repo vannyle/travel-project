@@ -1,0 +1,68 @@
+.tabs {
+  padding-bottom: 500px;
+
+  background-image: url("../../img/tabs/map.svg");
+  background-size: 1444px 1089px;
+  background-position: center 138px;
+  background-repeat: no-repeat;
+}
+
+.tabs__nav {
+  max-width: 900px;
+  font-weight: 500;
+
+  @include font-size-sm;
+}
+
+.tabs__nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  margin-bottom: 95px;
+  border-bottom: 1px solid rgba($color-secondary, 0.3);
+  list-style-type: none;
+}
+
+.tabs__nav-link {
+  @include link-secondary;
+
+  &--active {
+    color: $color-accent-primary;
+  }
+}
+
+.tabs__wrapper {
+  display: flex;
+}
+
+.tabs__content {
+  margin-right: 100px;
+}
+
+.tabs__header {
+  position: relative;
+  margin-bottom: 55px;
+  letter-spacing: -1.245px;
+  font-weight: 600;
+  color: $color-primary;
+
+  @include font-size-xxxl;
+  @include header-underline;
+
+  &::after {
+    width: 175px;
+    height: 3px;
+    bottom: -23px;
+  }
+}
+
+.tabs__description {
+  max-width: 370px;
+  margin-bottom: 43px;
+  letter-spacing: -0.466667px;
+  line-height: 29px;
+}
+
+.tabs__button {
+  @include button;
+}

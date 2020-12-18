@@ -1,11 +1,87 @@
-@mixin with-link-primary {
-  a {
-    color: $color-primary;
-    text-decoration: none;
-    transition: color $transition-base;
+@mixin font-size-xxxl {
+  font-size: 55px;
+  line-height: 80px;
+}
 
-    &:hover {
-      color: $color-accent-primary;
-    }
+@mixin font-size-xxl {
+  font-size: 30px;
+  line-height: 37px;
+}
+
+@mixin font-size-xl {
+  font-size: 28px;
+  line-height: 38px;
+}
+
+@mixin font-size-lg {
+  font-size: 25px;
+  line-height: 32px;
+}
+
+@mixin font-size-md {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@mixin font-size-sm {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin font-size-xs {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@mixin font-size-xxs {
+  font-size: 14px;
+  line-height: 170%;
+}
+
+@mixin header-underline {
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    background-color: $color-accent-primary;
+  }
+}
+
+
+@mixin link-primary {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-accent-primary;
+  }
+}
+
+@mixin link-secondary {
+  color: rgba($color-secondary, 0.3);
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-accent-primary;
+  }
+}
+
+@mixin button {
+  padding: 30px 40px;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: $color-accent-primary;
+  transition: background-color $transition-base;
+  color: $color-tertiary;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent-secondary;
   }
 }
