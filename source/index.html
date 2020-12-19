@@ -38,8 +38,7 @@
       <div class="hero__wrapper">
         <h2 class="hero__header">Путешествие по Европе</h2>
         <p class="hero__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а
-          также
-          потрясающая красота природы.</p>
+          также потрясающая красота природы.</p>
         <button class="hero__button" type="button">
           смотреть тур
           <svg class="hero__button-icon" width="14" height="14">
@@ -55,7 +54,7 @@
       <h2 class="countries__header">Места посещения</h2>
       <p class="countries__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <div class="countries__list">
-        <div class="countries__item countries__item--greece">
+        <a class="countries__item countries__item--greece" href="#">
           <picture>
             <source type="image/webp" media="(min-width: 1300px)"
                     srcset="img/countries/greece@1x.webp 1x, img/countries/greece@2x.webp 2x">
@@ -66,8 +65,8 @@
           <div class="countries__name-wrapper">
             <h3 class="countries__name">Греция</h3>
           </div>
-        </div>
-        <div class="countries__item countries__item--albania">
+        </a>
+        <a class="countries__item countries__item--albania" href="#">
           <picture>
             <source type="image/webp" media="(min-width: 1300px)"
                     srcset="img/countries/albania@1x.webp 1x, img/countries/albania@2x.webp 2x">
@@ -79,8 +78,8 @@
           <div class="countries__name-wrapper">
             <h3 class="countries__name">Албания</h3>
           </div>
-        </div>
-        <div class="countries__item countries__item--macedonia">
+        </a>
+        <a class="countries__item countries__item--macedonia" href="#">
           <picture>
             <source type="image/webp" media="(min-width: 1300px)"
                     srcset="img/countries/macedonia@1x.webp 1x, img/countries/macedonia@2x.webp 2x">
@@ -93,8 +92,8 @@
           <div class="countries__name-wrapper">
             <h3 class="countries__name">Македония</h3>
           </div>
-        </div>
-        <div class="countries__item countries__item--montenegro">
+        </a>
+        <a class="countries__item countries__item--montenegro" href="#">
           <picture>
             <source type="image/webp" media="(min-width: 1300px)"
                     srcset="img/countries/montenegro@1x.webp 1x, img/countries/montenegro@2x.webp 2x">
@@ -106,8 +105,8 @@
           <div class="countries__name-wrapper">
             <h3 class="countries__name">Черногория</h3>
           </div>
-        </div>
-        <div class="countries__item countries__item--croatia">
+        </a>
+        <a class="countries__item countries__item--croatia" href="#">
           <picture>
             <source type="image/webp" media="(min-width: 1300px)"
                     srcset="img/countries/croatia@1x.webp 1x, img/countries/croatia@2x.webp 2x">
@@ -119,7 +118,7 @@
           <div class="countries__name-wrapper">
             <h3 class="countries__name">Хорватия</h3>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -160,7 +159,16 @@
             <p class="testimonials__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
               высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как
               будто стоишь на краю света!</p>
-            <div class="testimonials__person">
+            <div class="testimonials__client">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                        srcset="img/testimonials/client@1x.webp 1x, img/testimonials/client@2x.webp 2x">
+                <source media="(min-width: 1300px)"
+                        srcset="img/testimonials/client@1x.png 1x, img/testimonials/client@2x.png 2x">
+                <img class="testimonials__avatar" src="img/testimonials/client@1x.png"
+                     srcset="img/testimonials/client@2x.png 2x"
+                     width="38" height="38" alt="Клиент">
+              </picture>
               <span class="testimonials__name">Влада Голицина</span>
             </div>
           </div>
@@ -170,23 +178,169 @@
   </section>
 
   <section class="pricing">
-    <div class="container">
+    <div class="pricing__wrapper container">
       <div class="pricing__content">
         <h2 class="pricing__header">Цены</h2>
         <p class="pricing__description">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь
           от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
         <div class="pricing__contact">
           <span class="pricing__cta">Свяжитесь с нами</span>
-          <span class="pricing__phone">
-            <svg class="pricing__phone-icon" width="30" height="30">
-              <use xlink:href="#icon-phone-small"></use>
+          <a class="pricing__phone" href="tel:+7 (499) -784-684-46">
+            <svg class="pricing__phone-icon" width="17" height="24">
+              <use xlink:href="#icon-phone"></use>
             </svg>
             +7 (499) -784-684-46
-          </span>
+          </a>
+        </div>
+      </div>
+      <div class="pricing__option pricing__option--active">
+        <h3 class="pricing__option-header">
+          <span class="pricing__option-name">Комплексный</span>
+          <span class="pricing__price">$1999</span>
+        </h3>
+        <p class="pricing__option-text">
+          Ознакомьтесь с перечнем того, что входит в данный пакет
+        </p>
+        <ul class="pricing__features-list">
+          <li class="pricing__features-item">
+            <svg class="pricing__tick-icon" width="14" height="12">
+              <use xlink:href="#icon-tick"></use>
+            </svg>
+            Разработанный маршрут с гидом группы
+          </li>
+          <li class="pricing__features-item">
+            <svg class="pricing__tick-icon" width="14" height="12">
+              <use xlink:href="#icon-tick"></use>
+            </svg>
+            Перелет, трансфер и проживание в отелях
+          </li>
+          <li class="pricing__features-item">
+            <svg class="pricing__tick-icon" width="14" height="12">
+              <use xlink:href="#icon-tick"></use>
+            </svg>
+            Завтраки, ужины в отелях и ланчи на природе
+          </li>
+          <li class="pricing__features-item">
+            <svg class="pricing__tick-icon" width="14" height="12">
+              <use xlink:href="#icon-tick"></use>
+            </svg>
+            Экскурсии по удивительно красивым местам Европы
+          </li>
+        </ul>
+        <button class="pricing__button">купить тур сейчас</button>
+      </div>
+      <div class="pricing__options">
+        <div class="pricing__option">
+          <h3 class="pricing__option-header">
+            <span class="pricing__option-name">Экономный</span>
+            <span class="pricing__price">$1399</span>
+          </h3>
+          <p class="pricing__option-text">
+            Ознакомьтесь с перечнем того, что входит в данный пакет
+          </p>
+          <ul class="pricing__features-list">
+            <li class="pricing__features-item">
+              <svg class="pricing__tick-icon" width="14" height="12">
+                <use xlink:href="#icon-tick"></use>
+              </svg>
+              Разработанный маршрут с гидом группы
+            </li>
+            <li class="pricing__features-item">
+              <svg class="pricing__tick-icon" width="14" height="12">
+                <use xlink:href="#icon-tick"></use>
+              </svg>
+              Перелет и трансфер
+            </li>
+            <li class="pricing__features-item">
+              <svg class="pricing__tick-icon" width="14" height="12">
+                <use xlink:href="#icon-tick"></use>
+              </svg>
+              Проживание в хостелах при отелях
+            </li>
+            <li class="pricing__features-item">
+              <svg class="pricing__tick-icon" width="14" height="12">
+                <use xlink:href="#icon-tick"></use>
+              </svg>
+              Только завтраки в отелях
+            </li>
+            <li class="pricing__features-item">
+              <svg class="pricing__tick-icon" width="14" height="12">
+                <use xlink:href="#icon-tick"></use>
+              </svg>
+              Экскурсии по удивительно красивым местам Европы
+            </li>
+          </ul>
+          <button class="pricing__button">купить тур сейчас</button>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="contact">
+    <div class="contact__wrapper container">
+      <form class="contact__form" action="#">
+        <h2 class="contact__header">У Вас остались вопросы?</h2>
+        <p class="contact__description">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+        <div class="contact__fields">
+          <div class="contact__field contact__field--number">
+            <input class="contact__field-input" type="tel" name="phone" id="phone"
+                   placeholder="Введите 10 цифр номера"
+                   required="">
+          </div>
+          <div class="contact__field  contact__field--email">
+            <input class="contact__field-input" type="tel" name="phone" id="email" placeholder="Email">
+          </div>
+        </div>
+        <button class="contact__button" type="submit">отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <div class="footer__section footer__section--next-travels">
+        <h3 class="footer__header">Следующие путешествия</h3>
+        <ul class="footer__countries-list">
+          <li class="footer__country">Марсель</li>
+          <li class="footer__country">Ним</li>
+          <li class="footer__country">Монпелье</li>
+          <li class="footer__country">Барселона</li>
+          <li class="footer__country">Пальма</li>
+          <li class="footer__country">Сардиния</li>
+          <li class="footer__country">Палермо</li>
+          <li class="footer__country">Катания</li>
+          <li class="footer__country">Неаполь</li>
+          <li class="footer__country">Рим</li>
+          <li class="footer__country">Корс</li>
+          <li class="footer__country">Ницца</li>
+          <li class="footer__country">Монако</li>
+          <li class="footer__country">Динь-ле-Бен</li>
+          <li class="footer__country">Гренобль</li>
+        </ul>
+      </div>
+      <div class="footer__section footer__section--contact">
+        <h3 class="footer__header">Наши контакты</h3>
+        <a class="footer__contact-info footer__contact-info--email" href="mailto:puteshestviemechta@gmail.ru">
+          <svg class="footer__icon" width="26" height="20">
+            <use xlink:href="#icon-email"></use>
+          </svg>
+          puteshestviemechta@gmail.ru
+        </a>
+        <a class="footer__contact-info footer__contact-info--phone" href="tel:+7 (499) -784-684-46">
+          <svg class="footer__icon" width="30" height="30">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+          +7 (499) -784-684-46
+        </a>
+      </div>
+      <div class="footer__section footer__section--corporate-travels">
+        <h3 class="footer__header">Корпоративные путешествия</h3>
+        <p class="footer__text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры
+          очень сближают компанию, помогают поддерживать корпоративный дух, а также являются отличным
+          времяпрепровождением</p>
+      </div>
+    </div>
+  </footer>
 </main>
 </body>
 </html>

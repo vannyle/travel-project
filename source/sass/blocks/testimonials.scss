@@ -8,9 +8,9 @@
   top: 50%;
   right: -270px;
   max-width: 382px;
-  padding: 30px 30px 30px;
+  padding: 30px 30px 20px;
   background-color: $color-quaternary;
-  transform: translateY(-50%);
+  transform: translateY(-51%);
 }
 
 .testimonials__header {
@@ -26,17 +26,29 @@
   &::after {
     width: 68px;
     height: 1px;
-    bottom: -15px;
+    bottom: -10px;
   }
 }
 
 .testimonials__text {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 
   @include font-size-xxs;
   line-height: 28px;
 }
 
+.testimonials__client {
+  display: flex;
+  align-items: center;
+}
+
+.testimonials__avatar {
+  margin-right: 17px;
+  border-radius: 50%;
+}
+
 .testimonials__name {
   color: $color-primary;
+  line-height: 20px;
+  letter-spacing: -0.466667px;
 }

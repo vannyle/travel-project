@@ -6,8 +6,16 @@ $color-quaternary: #ffffff;
 $color-accent-primary: #FE7865;
 $color-accent-secondary: #F17D4B;
 
+$color-additional: #D7D9DF;
+
 $text-color: rgba(44, 46, 63, 0.7);
 
 $font-family: "Montserrat", "Arial", sans-serif;
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
 
 $transition-base: 0.2s;

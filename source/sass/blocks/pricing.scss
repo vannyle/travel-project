@@ -1,0 +1,151 @@
+.pricing {
+  margin-top: -270px;
+  margin-bottom: 138px;
+}
+
+.pricing__wrapper {
+  display: flex;
+}
+
+.pricing__content {
+  max-width: 300px;
+  padding-top: 113px;
+  order: 1;
+}
+
+.pricing__header {
+  position: relative;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+
+  @include header-underline;
+
+  &::after {
+    width: 175px;
+    height: 3px;
+    bottom: -17px;
+  }
+}
+
+.pricing__description {
+  margin-bottom: 60px;
+}
+
+.pricing__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.pricing__cta {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.pricing__phone {
+  position: relative;
+
+  @include link-primary;
+}
+
+.pricing__phone-icon {
+  position: absolute;
+  top: 5px;
+  left: -45px;
+  fill: transparent;
+  stroke: $color-accent-primary;
+}
+
+.pricing__options {
+  margin-right: 100px;
+}
+
+.pricing__option {
+  display: flex;
+  flex-direction: column;
+  max-width: 370px;
+  padding: 30px;
+  margin-right: 33px;
+  background-color: $color-quaternary;
+  border: 2px solid rgba($color-primary, 0.3);
+  box-sizing: border-box;
+  border-radius: 6px;
+  transition-duration: $transition-base;
+  transition-property: border, color, fill;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border: 2px solid $color-accent-primary;
+
+    .pricing__option-header {
+      color: $color-accent-primary;
+    }
+
+    .pricing__tick-icon {
+      fill: $color-primary;
+    }
+  }
+}
+
+.pricing__option-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.pricing__price {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+}
+
+.pricing__option-text {
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  line-height: 24px;
+  border-bottom: 1px solid rgba($color-accent-primary, 0.5)
+}
+
+.pricing__features-list {
+  margin-bottom: 56px;
+  line-height: 32px;
+  list-style-type: none;
+}
+
+.pricing__features-item {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  line-height: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pricing__tick-icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  fill: $color-accent-primary;
+}
+
+.pricing__button {
+  margin-top: auto;
+
+  @include button;
+}

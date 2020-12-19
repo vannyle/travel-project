@@ -68,6 +68,16 @@
   }
 }
 
+@mixin link-tertiary {
+  color: $color-accent-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: rgba($color-secondary, 0.5);
+  }
+}
+
 @mixin button {
   padding: 30px 40px;
   font-size: 12px;
