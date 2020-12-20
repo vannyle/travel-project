@@ -17,12 +17,20 @@
 </div>
 <header class="header container">
   <div class="header__wrapper">
-    <svg class="header__logo" width="58" height="22">
-      <use xlink:href="#icon-logo"></use>
-    </svg>
+    <div class="header__inner">
+      <picture>
+        <source media="(min-width: 1170px)" srcset="img/header/logo-big.svg">
+        <img class="header__logo" src="img/header/logo-small.svg" alt="Логотип">
+      </picture>
+      <button class="header__toggle header__toggle--close header__toggle--nojs" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
     <div class="header__nav">
-      <a class="header__link header__link--about" href="#">О путешествии</a>
-      <a class="header__link header__link--price" href="#">Цены</a>
+      <a class="header__link header__link--about" href="#countries">О путешествии</a>
+      <a class="header__link header__link--price" href="#pricing">Цены</a>
       <a class="header__link header__link--phone" href="tel:+749978468446">
         <svg class="header__link--phone-icon" width="17" height="24">
           <use xlink:href="#icon-phone"></use>
@@ -39,102 +47,127 @@
         <h2 class="hero__header">Путешествие по Европе</h2>
         <p class="hero__description">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а
           также потрясающая красота природы.</p>
-        <button class="hero__button" type="button">
+        <a class="hero__button" type="button" href="#tabs">
           смотреть тур
           <svg class="hero__button-icon" width="14" height="14">
             <use xlink:href="#icon-arrow-down"></use>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="countries">
+  <section class="countries" id="countries">
     <div class="countries__wrapper container">
       <h2 class="countries__header">Места посещения</h2>
       <p class="countries__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <div class="countries__list">
-        <a class="countries__item countries__item--greece" href="#">
+        <figure class="countries__item countries__item--greece">
           <picture>
-            <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/countries/greece@1x.webp 1x, img/countries/greece@2x.webp 2x">
-            <source media="(min-width: 1300px)" srcset="img/countries/greece@1x.png 1x, img/countries/greece@2x.png 2x">
-            <img class="countries__image" src="img/countries/greece@1x.png" srcset="img/countries/greece@2x.png 2x"
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/countries/greece-desktop@1x.webp 1x, img/countries/greece-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)" srcset="img/countries/greece-desktop@1x.png 1x, img/countries/greece-desktop@2x.png 2x">
+            <img class="countries__image" src="img/countries/greece-desktop@1x.png" srcset="img/countries/greece-desktop@2x.png 2x"
                  width="350" height="430" alt="Природа Греции">
           </picture>
-          <div class="countries__name-wrapper">
+          <figcaption class="countries__name-wrapper">
             <h3 class="countries__name">Греция</h3>
+          </figcaption>
+          <div class="countries__inner">
+            <a href="#greece" class="countries__link">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="countries__item countries__item--albania" href="#">
+        </figure>
+        <figure class="countries__item countries__item--albania">
           <picture>
-            <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/countries/albania@1x.webp 1x, img/countries/albania@2x.webp 2x">
-            <source media="(min-width: 1300px)"
-                    srcset="img/countries/albania@1x.png 1x, img/countries/albania@2x.png 2x">
-            <img class="countries__image" src="img/countries/albania@1x.png" srcset="img/countries/albania@2x.png 2x"
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/countries/albania-desktop@1x.webp 1x, img/countries/albania-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/countries/albania-desktop@1x.png 1x, img/countries/albania-desktop@2x.png 2x">
+            <img class="countries__image" src="img/countries/albania-desktop@1x.png" srcset="img/countries/albania-desktop@2x.png 2x"
                  width="350" height="430" alt="Природа Албании">
           </picture>
-          <div class="countries__name-wrapper">
+          <figcaption class="countries__name-wrapper">
             <h3 class="countries__name">Албания</h3>
+          </figcaption>
+          <div class="countries__inner">
+            <a href="#albania" class="countries__link">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="countries__item countries__item--macedonia" href="#">
+        </figure>
+        <figure class="countries__item countries__item--macedonia">
           <picture>
-            <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/countries/macedonia@1x.webp 1x, img/countries/macedonia@2x.webp 2x">
-            <source media="(min-width: 1300px)"
-                    srcset="img/countries/macedonia@1x.png 1x, img/countries/macedonia@2x.png 2x">
-            <img class="countries__image" src="img/countries/macedonia@1x.png"
-                 srcset="img/countries/macedonia@2x.png 2x"
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/countries/macedonia-desktop@1x.webp 1x, img/countries/macedonia-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/countries/macedonia-desktop@1x.png 1x, img/countries/macedonia-desktop@2x.png 2x">
+            <img class="countries__image" src="img/countries/macedonia-desktop@1x.png"
+                 srcset="img/countries/macedonia-desktop@2x.png 2x"
                  width="350" height="430" alt="Природа Македонии">
           </picture>
-          <div class="countries__name-wrapper">
+          <figcaption class="countries__name-wrapper">
             <h3 class="countries__name">Македония</h3>
+          </figcaption>
+          <div class="countries__inner">
+            <a href="#macedonia" class="countries__link">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="countries__item countries__item--montenegro" href="#">
+        </figure>
+        <figure class="countries__item countries__item--montenegro">
           <picture>
-            <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/countries/montenegro@1x.webp 1x, img/countries/montenegro@2x.webp 2x">
-            <source media="(min-width: 1300px)"
-                    srcset="img/countries/montenegro@1x.png 1x, img/countries/montenegro@2x.png 2x">
-            <img class="countries__image" src="img/countries/montenegro@1x.png"
-                 srcset="img/countries/montenegro@2x.png 2x" width="350" height="430" alt="Природа Черногории">
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/countries/montenegro-desktop@1x.webp 1x, img/countries/montenegro-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/countries/montenegro-desktop@1x.png 1x, img/countries/montenegro-desktop@2x.png 2x">
+            <img class="countries__image" src="img/countries/montenegro-desktop@1x.png"
+                 srcset="img/countries/montenegro-desktop@2x.png 2x" width="350" height="430" alt="Природа Черногории">
           </picture>
-          <div class="countries__name-wrapper">
+          <figcaption class="countries__name-wrapper">
             <h3 class="countries__name">Черногория</h3>
+          </figcaption>
+          <div class="countries__inner">
+            <a href="#montenegro" class="countries__link">Смотреть подробнее</a>
           </div>
-        </a>
-        <a class="countries__item countries__item--croatia" href="#">
+        </figure>
+        <figure class="countries__item countries__item--croatia">
           <picture>
-            <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/countries/croatia@1x.webp 1x, img/countries/croatia@2x.webp 2x">
-            <source media="(min-width: 1300px)"
-                    srcset="img/countries/croatia@1x.png 1x, img/countries/croatia@2x.png 2x">
-            <img class="countries__image" src="img/countries/croatia@1x.png" srcset="img/countries/croatia@2x.png 2x"
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/countries/croatia-desktop@1x.webp 1x, img/countries/croatia-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/countries/croatia-desktop@1x.png 1x, img/countries/croatia-desktop@2x.png 2x">
+            <img class="countries__image" src="img/countries/croatia-desktop@1x.png" srcset="img/countries/croatia-desktop@2x.png 2x"
                  width="350" height="430" alt="Природа Хорватии">
           </picture>
-          <div class="countries__name-wrapper">
+          <figcaption class="countries__name-wrapper">
             <h3 class="countries__name">Хорватия</h3>
+          </figcaption>
+          <div class="countries__inner">
+            <a href="#croatia" class="countries__link">Смотреть подробнее</a>
           </div>
-        </a>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="tabs">
+  <section class="tabs" id="tabs">
     <div class="container">
       <nav class="tabs__nav">
         <ul class="tabs__nav-list">
-          <li class="tabs__nav-item"><a class="tabs__nav-link tabs__nav-link--active" href="#">Греция</a></li>
-          <li class="tabs__nav-item"><a class="tabs__nav-link" href="#">Албания</a></li>
-          <li class="tabs__nav-item"><a class="tabs__nav-link" href="#">Македония</a></li>
-          <li class="tabs__nav-item"><a class="tabs__nav-link" href="#">Черногория</a></li>
-          <li class="tabs__nav-item"><a class="tabs__nav-link" href="#">Хорватия</a></li>
+          <li class="tabs__nav-item">
+            <button class="tabs__nav-link tabs__nav-link--active" data-tab-id="greece">Греция</button>
+          </li>
+          <li class="tabs__nav-item">
+            <button class="tabs__nav-link" data-tab-id="albania">Албания</button>
+          </li>
+          <li class="tabs__nav-item">
+            <button class="tabs__nav-link" data-tab-id="macedonia">Македония</button>
+          </li>
+          <li class="tabs__nav-item">
+            <button class="tabs__nav-link" data-tab-id="montenegro">Черногория</button>
+          </li>
+          <li class="tabs__nav-item">
+            <button class="tabs__nav-link" data-tab-id="croatia">Хорватия</button>
+          </li>
         </ul>
       </nav>
-      <div class="tabs__wrapper">
+      <div class="tabs__wrapper tabs__wrapper--active" id="greece">
         <div class="tabs__content">
           <h2 class="tabs__header">Греция</h2>
           <p class="tabs__description">На севере Греции находится один из крупнейших комплексов монастырей,
@@ -146,9 +179,9 @@
         </div>
         <div class="tabs__testimonials testimonials">
           <picture>
-            <source type="image/webp" media="(min-width: 1300px)"
+            <source type="image/webp" media="(min-width: 1170px)"
                     srcset="img/tabs/greece-desktop@1x.webp 1x, img/tabs/greece-desktop@2x.webp 2x">
-            <source media="(min-width: 1300px)"
+            <source media="(min-width: 1170px)"
                     srcset="img/tabs/greece-desktop@1x.png 1x, img/tabs/greece-desktop@2x.png 2x">
             <img class="testimonials__image" src="img/tabs/greece-desktop@1x.png"
                  srcset="img/tabs/greece-desktop@2x.png 2x"
@@ -161,9 +194,9 @@
               будто стоишь на краю света!</p>
             <div class="testimonials__client">
               <picture>
-                <source type="image/webp" media="(min-width: 1300px)"
+                <source type="image/webp" media="(min-width: 1170px)"
                         srcset="img/testimonials/client@1x.webp 1x, img/testimonials/client@2x.webp 2x">
-                <source media="(min-width: 1300px)"
+                <source media="(min-width: 1170px)"
                         srcset="img/testimonials/client@1x.png 1x, img/testimonials/client@2x.png 2x">
                 <img class="testimonials__avatar" src="img/testimonials/client@1x.png"
                      srcset="img/testimonials/client@2x.png 2x"
@@ -174,10 +207,165 @@
           </div>
         </div>
       </div>
+
+      <div class="tabs__wrapper" id="albania">
+        <div class="tabs__content">
+          <h2 class="tabs__header">Албания</h2>
+          <p class="tabs__description">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и
+            удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и
+            слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого
+            мелкого состояния.</p>
+          <button class="tabs__button" type="button">купить тур сейчас</button>
+        </div>
+        <div class="tabs__testimonials testimonials">
+          <picture>
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/tabs/albania-desktop@1x.webp 1x, img/tabs/albania-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/tabs/albania-desktop@1x.png 1x, img/tabs/albania-desktop@2x.png 2x">
+            <img class="testimonials__image" src="img/tabs/albania-desktop@1x.png"
+                 srcset="img/tabs/albania-desktop@2x.png 2x"
+                 width="430" height="596" alt="Природа Албании">
+          </picture>
+          <div class="testimonials__wrapper">
+            <h3 class="testimonials__header">Отзывы</h3>
+            <p class="testimonials__text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
+              собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
+            <div class="testimonials__client">
+              <picture>
+                <source type="image/webp" media="(min-width: 1170px)"
+                        srcset="img/testimonials/marishka@1x.webp 1x, img/testimonials/marishka@2x.webp 2x">
+                <source media="(min-width: 1170px)"
+                        srcset="img/testimonials/marishka@1x.png 1x, img/testimonials/marishka@2x.png 2x">
+                <img class="testimonials__avatar" src="img/testimonials/marishka@1x.png"
+                     srcset="img/testimonials/marishka@2x.png 2x"
+                     width="38" height="38" alt="Клиент">
+              </picture>
+              <span class="testimonials__name">Маришка</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__wrapper" id="macedonia">
+        <div class="tabs__content">
+          <h2 class="tabs__header">Македония</h2>
+          <p class="tabs__description">В Македонии нашей целью будет посетить Палаошник, который расположился в
+            удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся
+            на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
+          <button class="tabs__button" type="button">купить тур сейчас</button>
+        </div>
+        <div class="tabs__testimonials testimonials">
+          <picture>
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/tabs/macedonia-desktop@1x.webp 1x, img/tabs/macedonia-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/tabs/macedonia-desktop@1x.png 1x, img/tabs/macedonia-desktop@2x.png 2x">
+            <img class="testimonials__image" src="img/tabs/macedonia-desktop@1x.png"
+                 srcset="img/tabs/macedonia-desktop@2x.png 2x"
+                 width="430" height="596" alt="Природа Македонии">
+          </picture>
+          <div class="testimonials__wrapper">
+            <h3 class="testimonials__header">Отзывы</h3>
+            <p class="testimonials__text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но подъем
+              в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно
+              после долгого пути в гору.</p>
+            <div class="testimonials__client">
+              <picture>
+                <source type="image/webp" media="(min-width: 1170px)"
+                        srcset="img/testimonials/mihail@1x.webp 1x, img/testimonials/mihail@2x.webp 2x">
+                <source media="(min-width: 1170px)"
+                        srcset="img/testimonials/mihail@1x.png 1x, img/testimonials/mihail@2x.png 2x">
+                <img class="testimonials__avatar" src="img/testimonials/mihail@1x.png"
+                     srcset="img/testimonials/mihail@2x.png 2x"
+                     width="38" height="38" alt="Клиент">
+              </picture>
+              <span class="testimonials__name">Михаил Кузьмин</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__wrapper" id="montenegro">
+        <div class="tabs__content">
+          <h2 class="tabs__header">Черногория</h2>
+          <p class="tabs__description">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
+            некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона
+            составляет 80 км.</p>
+          <button class="tabs__button" type="button">купить тур сейчас</button>
+        </div>
+        <div class="tabs__testimonials testimonials">
+          <picture>
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/tabs/montenegro-desktop@1x.webp 1x, img/tabs/montenegro-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/tabs/montenegro-desktop@1x.png 1x, img/tabs/montenegro-desktop@2x.png 2x">
+            <img class="testimonials__image" src="img/tabs/montenegro-desktop@1x.png"
+                 srcset="img/tabs/montenegro-desktop@2x.png 2x"
+                 width="430" height="596" alt="Природа Греции">
+          </picture>
+          <div class="testimonials__wrapper">
+            <h3 class="testimonials__header">Отзывы</h3>
+            <p class="testimonials__text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в
+              фильмах :) Всем советую</p>
+            <div class="testimonials__client">
+              <picture>
+                <source type="image/webp" media="(min-width: 1170px)"
+                        srcset="img/testimonials/anastasiia@1x.webp 1x, img/testimonials/anastasiia@2x.webp 2x">
+                <source media="(min-width: 1170px)"
+                        srcset="img/testimonials/anastasiia@1x.png 1x, img/testimonials/anastasiia@2x.png 2x">
+                <img class="testimonials__avatar" src="img/testimonials/anastasiia@1x.png"
+                     srcset="img/testimonials/anastasiia@2x.png 2x"
+                     width="38" height="38" alt="Клиент">
+              </picture>
+              <span class="testimonials__name">Анастасия Мей</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs__wrapper" id="croatia">
+        <div class="tabs__content">
+          <h2 class="tabs__header">Хорватия</h2>
+          <p class="tabs__description">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир
+            увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными
+            скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
+          <button class="tabs__button" type="button">купить тур сейчас</button>
+        </div>
+        <div class="tabs__testimonials testimonials">
+          <picture>
+            <source type="image/webp" media="(min-width: 1170px)"
+                    srcset="img/tabs/croatia-desktop@1x.webp 1x, img/tabs/croatia-desktop@2x.webp 2x">
+            <source media="(min-width: 1170px)"
+                    srcset="img/tabs/croatia-desktop@1x.png 1x, img/tabs/croatia-desktop@2x.png 2x">
+            <img class="testimonials__image" src="img/tabs/croatia-desktop@1x.png"
+                 srcset="img/tabs/croatia-desktop@2x.png 2x"
+                 width="430" height="596" alt="Природа Греции">
+          </picture>
+          <div class="testimonials__wrapper">
+            <h3 class="testimonials__header">Отзывы</h3>
+            <p class="testimonials__text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема! А
+              то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни с
+              чем не спутать по итогу :)</p>
+            <div class="testimonials__client">
+              <picture>
+                <source type="image/webp" media="(min-width: 1170px)"
+                        srcset="img/testimonials/vladimir@1x.webp 1x, img/testimonials/vladimir@2x.webp 2x">
+                <source media="(min-width: 1170px)"
+                        srcset="img/testimonials/vladimir@1x.png 1x, img/testimonials/vladimir@2x.png 2x">
+                <img class="testimonials__avatar" src="img/testimonials/vladimir@1x.png"
+                     srcset="img/testimonials/vladimir@2x.png 2x"
+                     width="38" height="38" alt="Клиент">
+              </picture>
+              <span class="testimonials__name">Владимир Мулицин</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="pricing">
+  <section class="pricing" id="pricing">
     <div class="pricing__wrapper container">
       <div class="pricing__content">
         <h2 class="pricing__header">Цены</h2>
@@ -342,5 +530,6 @@
     </div>
   </footer>
 </main>
+<script src="js/app.min.js"></script>
 </body>
 </html>

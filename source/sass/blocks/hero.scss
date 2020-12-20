@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("../../img/hero/background-image@1x.png");
+  background-image: url("../../img/hero/background-image-desktop@1x.png");
   min-height: 860px;
   background-position: center top;
   background-repeat: no-repeat;
@@ -7,24 +7,43 @@
   margin-bottom: 200px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../../img/hero/background-image@2x.png");
+    background-image: url("../../img/hero/background-image-desktop@2x.png");
+  }
+
+  @media only screen and (max-width: $laptop-width) {
+    min-height: initial;
+    margin-bottom: 80px;
+    background-image: url("../../img/hero/background-image-tablet@1x.png");
+    background-size: contain;
   }
 }
 
 .hero__wrapper {
   max-width: 470px;
   padding-top: 190px;
+  padding-bottom: 294px;
   margin-left: auto;
+
+  @media only screen and (max-width: $laptop-width) {
+    max-width: initial;
+    padding-top: 60px;
+    padding-bottom: 83px;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 .hero__header {
   max-width: 412px;
   margin-bottom: 25px;
-  font-weight: 600;
   letter-spacing: -1.10667px;
   color: $color-quaternary;
 
-  @include font-size-xxxl;
+  @media only screen and (max-width: $laptop-width) {
+    max-width: initial;
+    margin-bottom: 15px;
+    letter-spacing: initial;
+  }
 }
 
 .hero__description {
@@ -33,14 +52,25 @@
   color: $color-quaternary;
   letter-spacing: -0.466667px;
   line-height: 1.7;
+
+  @media only screen and (max-width: $laptop-width) {
+    max-width: 398px;
+    margin: 0 auto 10px;
+  }
 }
 
 .hero__button {
   position: relative;
+  display: block;
   width: 340px;
   text-align: left;
+  text-decoration: none;
 
   @include button;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin: 0 auto;
+  }
 }
 
 .hero__button-icon {

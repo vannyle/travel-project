@@ -1,46 +1,73 @@
 .countries {
-  margin-bottom: 55px;
+  margin-bottom: 87px;
+}
+
+.countries__wrapper {
+  @media only screen and (max-width: $laptop-width) {
+    text-align: center;
+  }
 }
 
 .countries__header {
   position: relative;
   margin-bottom: 65px;
   max-width: 358px;
-  font-weight: 600;
   color: $color-secondary;
   letter-spacing: -1.245px;
 
   @include header-underline;
+
+  @media only screen and (max-width: $laptop-width) {
+    max-width: initial;
+    margin: 0 auto 20px;
+    letter-spacing: initial;
+  }
 
   &::after {
     width: 230px;
     height: 4px;
     bottom: -35px;
   }
-
-  @include font-size-xxxl;
 }
 
 .countries__description {
   max-width: 345px;
   margin-bottom: 57px;
   letter-spacing: -0.466667px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin: 0 auto 40px;
+  }
 }
 
 .countries__list {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(2, 471px);
+  grid-template-rows: repeat(2, min-content);
   column-gap: 60px;
-  row-gap: 60px;
+  row-gap: 92px;
   text-align: center;
   justify-content: center;
   justify-items: center;
+
+  @media only screen and (max-width: $laptop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .countries__item {
   position: relative;
   grid-column: span 5;
+
+  &:hover {
+    .countries__inner {
+      opacity: 1;
+      transform: translateY(0);
+      background-color: rgba(20, 21, 23, 0.6);
+      pointer-events: initial;
+    }
+  }
 
   &:nth-child(4) {
     grid-column: 3 / span 5;
@@ -55,7 +82,7 @@
 
 .countries__name-wrapper {
   position: absolute;
-  bottom: 40px;
+  bottom: 9px;
   left: 50%;
   width: 215px;
   height: 61px;
@@ -70,4 +97,23 @@
   z-index: 1;
 
   @include font-size-md;
+}
+
+.countries__inner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 9px);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all $transition-base;
+  pointer-events: none;
+}
+
+.countries__link {
+  @include button-white;
 }

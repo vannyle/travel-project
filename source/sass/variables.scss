@@ -1,3 +1,10 @@
+$retina-dppx: 1.5dppx;
+$retina-dpi: 144dpi;
+$laptop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 320px;
+
+
 $color-primary: #141517;
 $color-secondary: #2c2e3f;
 $color-tertiary: #FBF8F8;
@@ -11,11 +18,4 @@ $color-additional: #D7D9DF;
 $text-color: rgba(44, 46, 63, 0.7);
 
 $font-family: "Montserrat", "Arial", sans-serif;
-
-$mobile-width-only: 767px;
-$tablet-width: 768px;
-$desktop-width: 1024px;
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
-
 $transition-base: 0.2s;

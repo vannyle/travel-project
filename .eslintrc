@@ -1,7 +1,13 @@
 root: true
+parserOptions:
+  ecmaVersion: 6
 
 env:
   browser: true
+  node: true
 
 extends:
-  "htmlacademy/es5"
+  "htmlacademy/es6"
+
+rules:
+  quotes: ["error", "single"]

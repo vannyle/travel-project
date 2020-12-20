@@ -53,10 +53,26 @@ body {
   box-sizing: border-box;
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+
+  @media only screen and (max-width: $laptop-width) {
+    font-size: 30px;
+    line-height: 150%;
+  }
+}
+
 .container {
   position: relative;
   width: 1170px;
   flex-grow: 1;
   margin-right: auto;
   margin-left: auto;
+
+  @media only screen and (max-width: $laptop-width) {
+    width: 100%;
+    padding: 0 20px;
+  }
 }

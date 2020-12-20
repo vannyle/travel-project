@@ -44,6 +44,10 @@
     content: "";
     left: 0;
     background-color: $color-accent-primary;
+
+    @media only screen and (max-width: $laptop-width) {
+      display: none;
+    }
   }
 }
 
@@ -91,7 +95,34 @@
   outline: none;
   cursor: pointer;
 
+  @media only screen and (max-width: $laptop-width) {
+    max-width: 250px;
+    padding: 19px 40px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
   &:hover {
     background-color: $color-accent-secondary;
+  }
+}
+
+@mixin button-white {
+  padding: 30px 25px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-quaternary;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid $color-quaternary;
+  outline: none;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    border: 1px solid $color-accent-primary;
   }
 }

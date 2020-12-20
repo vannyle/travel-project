@@ -25,6 +25,14 @@
 
 .tabs__nav-link {
   @include link-secondary;
+  font-family: inherit;
+  background-color: $color-quaternary;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 
   &--active {
     color: $color-accent-primary;
@@ -32,7 +40,11 @@
 }
 
 .tabs__wrapper {
-  display: flex;
+  display: none;
+
+  &--active {
+    display: flex;
+  }
 }
 
 .tabs__content {
@@ -43,10 +55,8 @@
   position: relative;
   margin-bottom: 55px;
   letter-spacing: -1.245px;
-  font-weight: 600;
   color: $color-primary;
 
-  @include font-size-xxxl;
   @include header-underline;
 
   &::after {
