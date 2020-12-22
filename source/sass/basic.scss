@@ -57,6 +57,7 @@ h2 {
   font-weight: 600;
   font-size: 55px;
   line-height: 80px;
+  color: $color-primary;
 
   @media only screen and (max-width: $laptop-width) {
     font-size: 30px;
@@ -66,7 +67,7 @@ h2 {
 
 .container {
   position: relative;
-  width: 1170px;
+  max-width: 1170px;
   flex-grow: 1;
   margin-right: auto;
   margin-left: auto;

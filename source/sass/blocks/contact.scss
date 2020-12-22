@@ -1,5 +1,12 @@
 .contact {
   margin-bottom: 170px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 80px;
+    background-image: url("../../img/contact/contact-image-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .contact__wrapper {
@@ -15,6 +22,11 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/contact/contact-image-desktop@2x.png");
   }
+
+  @media only screen and (max-width: $laptop-width) {
+    background-image: none;
+    justify-content: center;
+  }
 }
 
 .contact__form {
@@ -28,6 +40,11 @@
   background-color: $color-quaternary;
   box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
   border-radius: 5px;
+
+  @media only screen and (max-width: $laptop-width) {
+    min-height: 311px;
+    margin-right: 0;
+  }
 }
 
 .contact__header {

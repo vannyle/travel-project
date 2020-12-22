@@ -1,6 +1,21 @@
 .testimonials {
   position: relative;
   margin-top: -15px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-left: -20px;
+    margin-right: -20px;
+    min-height: 447px;
+  }
+}
+
+.testimonials__image {
+  @media only screen and (max-width: $laptop-width) {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .testimonials__wrapper {
@@ -11,6 +26,15 @@
   padding: 30px 30px 20px;
   background-color: $color-quaternary;
   transform: translateY(-51%);
+
+  @media only screen and (max-width: $laptop-width) {
+    position: initial;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 85px;
+    text-align: left;
+    transform: translateY(0);
+  }
 }
 
 .testimonials__header {
@@ -19,6 +43,18 @@
   font-weight: 500;
   color: $color-primary;
   letter-spacing: -0.691667px;
+
+  &::before {
+    @media only screen and (max-width: $laptop-width) {
+      bottom: -12px;
+      width: 68px;
+      height: 1px;
+      position: absolute;
+      content: "";
+      left: 0;
+      background-color: $color-accent-primary;
+    }
+  }
 
   @include font-size-xxl;
   @include header-underline;
@@ -35,6 +71,11 @@
 
   @include font-size-xxs;
   line-height: 28px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 27px;
+    letter-spacing: -0.408333px;
+  }
 }
 
 .testimonials__client {

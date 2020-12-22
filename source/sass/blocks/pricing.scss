@@ -1,26 +1,44 @@
 .pricing {
   margin-top: -270px;
   margin-bottom: 138px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-top: 0;
+    margin-bottom: 123px;
+    text-align: center;
+  }
 }
 
 .pricing__wrapper {
   display: flex;
+
+  @media only screen and (max-width: $laptop-width) {
+    flex-wrap: wrap;
+  }
 }
 
 .pricing__content {
   max-width: 300px;
   padding-top: 113px;
   order: 1;
+
+  @media only screen and (max-width: $laptop-width) {
+    padding-top: 0;
+    margin-bottom: 30px;
+    max-width: initial;
+    order: -1;
+  }
 }
 
 .pricing__header {
   position: relative;
   margin-bottom: 50px;
-  font-weight: 600;
-  font-size: 55px;
-  line-height: 90px;
 
   @include header-underline;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 17px;
+  }
 
   &::after {
     width: 175px;
@@ -31,6 +49,10 @@
 
 .pricing__description {
   margin-bottom: 60px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .pricing__contact {
@@ -40,6 +62,13 @@
   align-items: center;
   font-size: 20px;
   line-height: 32px;
+  color: $color-primary;
+
+  @media only screen and (max-width: $laptop-width) {
+    .pricing__phone {
+      text-decoration-line: underline;
+    }
+  }
 }
 
 .pricing__cta {
@@ -47,12 +76,22 @@
   font-weight: 500;
   font-size: 22px;
   line-height: 34px;
+
+  @media only screen and (max-width: $laptop-width) {
+    font-size: 18px;
+  }
 }
 
 .pricing__phone {
   position: relative;
 
   @include link-primary;
+
+  @media only screen and (max-width: $laptop-width) {
+    font-size: 18px;
+
+    @include link-tertiary;
+  }
 }
 
 .pricing__phone-icon {
@@ -61,10 +100,21 @@
   left: -45px;
   fill: transparent;
   stroke: $color-accent-primary;
+
+  @media only screen and (max-width: $laptop-width) {
+    display: none;
+  }
 }
 
 .pricing__options {
+  display: flex;
   margin-right: 100px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-right: 0;
+    width: 100%;
+    justify-content: space-evenly;
+  }
 }
 
 .pricing__option {
@@ -78,6 +128,19 @@
   box-sizing: border-box;
   border-radius: 6px;
   transition-duration: all $transition-base;
+
+  @media only screen and (max-width: $laptop-width) {
+    max-width: 288px;
+    padding: 30px 20px 0;
+
+    &:nth-child(1) {
+      margin-right: -5px;
+    }
+
+    &:nth-child(2) {
+      margin-left: -5px;
+    }
+  }
 
   &:last-child {
     margin-right: 0;
@@ -104,7 +167,22 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 34px;
+  color: rgba($color-primary, 0.7);
   transition-duration: color $transition-base;
+
+  @media only screen and (max-width: $laptop-width) {
+    display: block;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.pricing__option-name {
+  @media only screen and (max-width: $laptop-width) {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 .pricing__price {
@@ -117,13 +195,23 @@
   padding-bottom: 25px;
   margin-bottom: 30px;
   line-height: 24px;
-  border-bottom: 1px solid rgba($color-accent-primary, 0.5)
+  border-bottom: 1px solid rgba($color-accent-primary, 0.5);
+
+  @media only screen and (max-width: $laptop-width) {
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+  }
 }
 
 .pricing__features-list {
   margin-bottom: 56px;
   line-height: 32px;
   list-style-type: none;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 30px;
+    text-align: left;
+  }
 }
 
 .pricing__features-item {
@@ -149,4 +237,10 @@
   margin-top: auto;
 
   @include button;
+
+  @media only screen and (max-width: $laptop-width) {
+    width: 288px;
+    margin-left: -22px;
+    margin-bottom: -2px;
+  }
 }

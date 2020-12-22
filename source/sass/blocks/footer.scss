@@ -1,21 +1,52 @@
 .footer {
   margin-bottom: 81px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 2px;
+  column-gap: 1px;
   background-color: $color-additional;
   font-size: 14px;
   line-height: 17px;
+
+  @media only screen and (max-width: $laptop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: $color-quaternary;
+  }
 }
 
 .footer__section {
   background-color: $color-quaternary;
 
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 58px;
+  }
+
   &--contact {
     padding-left: 90px;
+
+    @media only screen and (max-width: $laptop-width) {
+      position: relative;
+      padding-left: 100px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 14%;
+        background-color: $color-additional;
+      }
+    }
 
     .footer__contact-info {
       text-decoration-line: underline;
@@ -29,6 +60,24 @@
   &--corporate-travels {
     padding-left: 47px;
     padding-right: 20px;
+
+    @media only screen and (max-width: $laptop-width) {
+      position: relative;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        top: -30px;
+        right: 0;
+        left: 0;
+        background-color: $color-additional;
+      }
+    }
   }
 }
 
@@ -47,6 +96,11 @@
   grid-auto-flow: column;
   row-gap: 11px;
   list-style-type: none;
+
+  @media only screen and (max-width: $laptop-width) {
+    column-gap: 30px;
+    row-gap: 10px;
+  }
 }
 
 .footer__contact-info {

@@ -96,7 +96,7 @@
   cursor: pointer;
 
   @media only screen and (max-width: $laptop-width) {
-    max-width: 250px;
+    width: 250px;
     padding: 19px 40px;
     font-weight: 500;
     font-size: 10px;

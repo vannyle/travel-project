@@ -5,6 +5,11 @@
   background-size: 1444px 1089px;
   background-position: center 138px;
   background-repeat: no-repeat;
+
+  @media only screen and (max-width: $laptop-width) {
+    padding-bottom: 0;
+    background-image: none;
+  }
 }
 
 .tabs__nav {
@@ -12,6 +17,10 @@
   font-weight: 500;
 
   @include font-size-sm;
+
+  @media only screen and (max-width: $laptop-width) {
+    padding-left: 17px;
+  }
 }
 
 .tabs__nav-list {
@@ -21,6 +30,11 @@
   margin-bottom: 95px;
   border-bottom: 1px solid rgba($color-secondary, 0.3);
   list-style-type: none;
+  overflow-x: auto;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .tabs__nav-link {
@@ -34,6 +48,10 @@
   outline: none;
   cursor: pointer;
 
+  @media only screen and (max-width: $laptop-width) {
+    margin-right: 96px;
+  }
+
   &--active {
     color: $color-accent-primary;
   }
@@ -44,11 +62,21 @@
 
   &--active {
     display: flex;
+
+    @media only screen and (max-width: $laptop-width) {
+      display: block;
+      text-align: center;
+    }
   }
 }
 
 .tabs__content {
   margin-right: 100px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-right: 0;
+    margin-bottom: 80px;
+  }
 }
 
 .tabs__header {
@@ -58,6 +86,11 @@
   color: $color-primary;
 
   @include header-underline;
+
+  @media only screen and (max-width: $laptop-width) {
+    letter-spacing: initial;
+    margin-bottom: 20px;
+  }
 
   &::after {
     width: 175px;
@@ -71,8 +104,18 @@
   margin-bottom: 43px;
   letter-spacing: -0.466667px;
   line-height: 29px;
+
+  @media only screen and (max-width: $laptop-width) {
+    max-width: initial;
+    margin-bottom: 20px;
+    line-height: 28px;
+  }
 }
 
 .tabs__button {
   @include button;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 45px;
+  }
 }

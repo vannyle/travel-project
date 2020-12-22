@@ -1,5 +1,9 @@
 .countries {
   margin-bottom: 87px;
+
+  @media only screen and (max-width: $laptop-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .countries__wrapper {
@@ -53,12 +57,21 @@
   @media only screen and (max-width: $laptop-width) {
     display: flex;
     flex-wrap: wrap;
+    column-gap: initial;
+    row-gap: initial;
+    //column-gap: 30px;
+    //grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   }
 }
 
 .countries__item {
   position: relative;
   grid-column: span 5;
+
+  @media only screen and (max-width: $laptop-width) {
+    flex-basis: 44%;
+    margin-bottom: 10px;
+  }
 
   &:hover {
     .countries__inner {
@@ -72,11 +85,20 @@
   &:nth-child(4) {
     grid-column: 3 / span 5;
     margin-left: 20px;
+
+    @media only screen and (max-width: $laptop-width) {
+      margin-left: 0;
+    }
   }
 
   &:nth-child(5) {
     grid-column: 9 / span 5;
     margin-right: 20px;
+
+    @media only screen and (max-width: $laptop-width) {
+      margin-right: 0;
+      margin-top: 10px;
+    }
   }
 }
 
